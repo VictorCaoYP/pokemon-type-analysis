@@ -1,47 +1,38 @@
-Pokemon Type Analysis: Identifying the Strongest Types Across Six Stats
-Tools: Tableau, SQL (SQLite)
-Dataset: Pokemon Gen 1-6 (Kaggle, 800 records)
-Tableau Public: #link
-Overview
-This project analyzes Pokémon across 18 types to identify which types are strongest based on six base stats: HP, Attack, Defense, Special Attack, Special Defense, and Speed. The analysis uses a calculated total stat metric to rank types from strongest to weakest and visualizes individual stat profiles to show why each type ranks where it does.
-Business Question
-In competitive Pokémon, players need to understand which types offer the best statistical foundations. This analysis answers two related questions:
+**Pokemon Type Analysis:** Finding the Strongest Pokemon Types Across Six Stats
+**Tools:** Tableau, SQL (SQLite) 
+**Dataset:** Pokemon Gen 1-6 (Kaggle, 800 records) 
+**Tableau Public:** #Link
 
-Which Pokémon types are strongest overall?
-What is each type's statistical profile (offensive specialist, defensive tank, balanced, etc.)?
+**Overview**
+This analysis looks at Pokemon across 18 types to determine the strongest types based on their six base stats. The assessment utilizes a calculated total stats metric to rank each type from strongest to weakest - and visualizes the stats profiles to show why each type ends up with such a position.
 
-Approach
+**Business Question**
+With competitive Pokemon games players need to understand which types provide the best statistical foundations. These studies helps to answer two main questions regarding Pokemon types:
+-	Which types of Pokemon are the strongest?
+-	What is the statistical profile for each of these types (offensive specialist vs. defensive tank, for example)?
 
-Loaded the Pokémon CSV into SQL to aggregate average stats by Type 1.
-Identified a data quality issue: the dataset's pre-calculated "Total" column did not match the sum of individual stats. Created a calculated field (HP + Attack + Defense + Sp. Atk + Sp. Def + Speed) for accurate ranking.
-Built individual bar charts for each of the six stats by type.
-Built a heatmap showing all six stats across all 18 types in a single view, sorted by calculated stat total.
+**Approach**
+The Pokemon CSV was loaded into SQL with aggregation for Type 1 stats.
+The data quality issue inherent in the existing dataset was discovered - the pre-calculated total stats did not match the type sums. The calculated field incorporating all six stats was created instead.
+Individual bar charts were built for each of the six stats.
+A heatmap incorporates all six stats across all 18 types - in one view - with the sort ordered by the calculated total stats metric.
 
-Key Findings
+**Key Findings**
+Dragon types take the #1 spot as the strongest overall - with an average total stat value of 550. Dragon types are among the top three performers across nearly every category of stats - they are the most balanced powerhouse type.
+Steel types come second overall at 488 - taking a completely different path to such high stats: exceptional Defense (126 average - highest of any type) and good Special Defense stats, at the cost of the slowest Speed.
+Flying and Steel types come very close here with 484 versus 488 - but represent opposite approaches. Flying boasts exceptional Speed (103 average - highest of any type) whereas Steel is a defensive tank.
+The specialists in Special Attack are clearly Psychic types (98) and Electric types (90) - both of whom have below-average physical Attack stats.
+Bug types come lowest overall with no standout stats - followed by Fairy types at 415 who feature low Attack power and the lowest Speed of any type of Pokemon.
 
-Dragon ranks #1 overall with an average stat total of 550. Dragons are top-3 in nearly every stat category, making them the most balanced powerhouse type.
-Steel ranks #2 (488) through a completely different path: extreme Defense (126 average, the highest of any type) and strong Special Defense, traded against the slowest Speed.
-Flying and Steel finish nearly tied (484 vs. 488) but represent opposite archetypes — Flying is a Speed specialist (103 average, highest of any type), Steel is a defensive tank.
-Special Attack specialists emerge clearly: Psychic (98) and Electric (90) dominate this stat while ranking below average in physical Attack.
-Bug ranks lowest overall (380) with no standout stat, followed by Fairy (415), which has low Attack and the lowest Speed of any type.
+**Data Quality Note**
+The data's pre-calculated "Total" stat exhibited inconsistencies - for example, Cloyster has six stats that total 525 yet the field states 275. This calculation of base stats was used instead as the metric in the report.
 
-Data Quality Note
-The dataset's pre-calculated "Total" column showed inconsistencies (for example, Cloyster's six stats sum to 525 but the column listed 275). To ensure accurate analysis, I created a calculated field that summed the six base stats and used it as the ranking metric throughout.
-Limitations
-This analysis is scoped to a specific subset of Pokémon data and should not be over-extrapolated:
+**Limitations**
+This scope touches only upon a specific subset of Pokemon data - do not over-extrapolate:
+Generations covered are limited to Gen 1-6 (Red/Blue through X/Y). Gen 7-9 Pokemon data not included.
+All Pokemon are categorized by type - primary type only. Dual type Pokemon are shown only in their Type 1 classification. This particularly impacts the size and speed of the Flying category relative to true Flying-type Pokemon populations.
+Legendaries are present within these averages. Types boasting many legendaries skew more heavily - Dragon and Psychic types exemplify this effect.
 
-Generations: Covers Gen 1-6 only (Red/Blue through X/Y). Gen 7-9 Pokémon are not included.
-Type 2 excluded: Pokémon are categorized by primary type only. Dual-type Pokémon (e.g., Charizard, Fire/Flying) are counted only in their Type 1 category. This particularly affects the Flying category, which appears smaller and faster than the true population of Flying-type Pokémon.
-Legendaries included: Legendary Pokemon are included in all averages. Types with many Legendaries (Dragon, Psychic) benefit disproportionately.
-
-Future Work
-
-Expand dataset to include Gen 7-9 (1,028 total Pokemon)
-Incorporate Type 2 so that dual-type Pokemon contribute to both type categories
-Add a Legendary toggle filter to the dashboard so viewers can see how rankings shift with and without Legendary Pokemon
-
-Files in This Repo
-
-queries.sql — SQL queries used to aggregate the data
-pokemon_analysis.twbx — Tableau workbook
-screenshots/ — PNG exports of the final dashboard
+**Future Work**
+Work can expand this data set to include Gen 7-9 (1,028 total Pokemon)
+Incorporate Type 2 information to allow dual-type Pokemon to contribute to both type categories
