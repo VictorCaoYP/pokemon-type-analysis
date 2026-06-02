@@ -19,10 +19,10 @@ A heatmap incorporates all six stats across all 18 types - in one view - with th
 
 **Key Findings**
 Dragon types take the #1 spot as the strongest overall - with an average total stat value of 550. Dragon types are among the top three performers across nearly every category of stats - they are the most balanced powerhouse type.
-Steel types come second overall at 488 - taking a completely different path to such high stats: exceptional Defense (126 average - highest of any type) and good Special Defense stats, at the cost of the slowest Speed.
-Flying and Steel types come very close here with 484 versus 488 - but represent opposite approaches. Flying boasts exceptional Speed (103 average - highest of any type) whereas Steel is a defensive tank.
-The specialists in Special Attack are clearly Psychic types (98) and Electric types (90) - both of whom have below-average physical Attack stats.
-Bug types come lowest overall with no standout stats - followed by Fairy types at 415 who feature low Attack power and the lowest Speed of any type of Pokemon.
+Steel types come second overall at 488 - taking a completely different path to such high stats: exceptional Defense (126 average - highest of any type) and good Special Defense stats, at the cost of the second slowest Speed (55 average - slightly above Fairy).
+Flying and Steel types come very close here with 485 versus 488 - but represent opposite approaches. Flying boasts exceptional Speed (103 average - highest of any type) whereas Steel is a defensive tank.
+The specialists in Special Attack are clearly Psychic types (98) and dragon (97), but unlike Psychic types that only have an average of 71 attack, Dragon types have a whopping 112 attack, the highest attack stat out of all types.
+Bug types come lowest overall (379) with no standout stats - followed by Poison types at 399 feature low Special Attack, Special Defense, and Speed.
 
 **Data Quality Note**
 The data's pre-calculated "Total" stat exhibited inconsistencies - for example, Cloyster has six stats that total 525 yet the field states 275. This calculation of base stats was used instead as the metric in the report.
