@@ -1,8 +1,7 @@
 **Pokemon Type Analysis:** Finding the Strongest Pokemon Types Across Six Stats
 **Tools:** Tableau, SQL (SQLite) 
 **Dataset:** Pokemon Gen 1-6 (Kaggle, 800 records) 
-**Tableau Public:** #Link
-
+**Tableau Public:** [View the interactive dashboard](https://public.tableau.com/app/profile/yupu.cao/viz/AverageStrengthsofEachPokemonTypeGen1-6/StrongestTypesAcrossSixStats)
 **Overview**
 This analysis looks at Pokemon across 18 types to determine the strongest types based on their six base stats. The assessment utilizes a calculated total stats metric to rank each type from strongest to weakest - and visualizes the stats profiles to show why each type ends up with such a position.
 
