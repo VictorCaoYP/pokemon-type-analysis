@@ -36,3 +36,10 @@ Legendaries are present within these averages. Types boasting many legendaries s
 **Future Work**
 Work can expand this data set to include Gen 7-9 (1,028 total Pokemon)
 Incorporate Type 2 information to allow dual-type Pokemon to contribute to both type categories
+
+**Files In This Repo**
+- avg-stats-by-type.sql
+- avg-total-by-generation.sql
+- compare-legendary.sql
+- pokemon-types.twbx
+- pokemon.csv
